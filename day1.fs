@@ -6,6 +6,7 @@ module Common =
 
 module Day1 =
     open System.IO
+
     let input = "./Inputs/day1" |> File.ReadAllLines
 
     let numbers =
@@ -27,17 +28,16 @@ module Day1 =
         | true, v -> Some v
         | false, _ -> None
     
-    let isDigit = 
-        System.Text.RegularExpressions.Regex("\d")
+    let isDigit = System.Text.RegularExpressions.Regex("\d")
     
     let fromSpelled (s: string) =
         match tryToInt s with
         | Some _ -> s
         | None -> 
         numbers
-         |> Set.filter (fun (spelled, _) -> s = spelled) 
-         |> Seq.head 
-         |> snd
+        |> Set.filter (fun (spelled, _) -> s = spelled) 
+        |> Seq.head 
+        |> snd
 
     let decrypt (s: string): seq<(string * int)> = 
         numbers 
@@ -68,6 +68,7 @@ module Day1 =
         |> Seq.map toCalibration
         |> Seq.choose tryToInt
         |> Seq.sum
+
     let partTwo (document: seq<string>) =
         document
         |> Seq.map decrypt
