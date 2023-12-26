@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "nR3wqWvrYTesEtZ/fCPfGk2zX/ekjKubiATQ4hG6/fbm24eIRyjbloeR+FLLc96/nY7SeQ5y2+38Y5oPio17Jw==",
+  "success": true,
+  "projectFilePath": "/Users/joaolopes/Projects/aoc23/aoc23.fsproj",
+  "expectedPackageFiles": [
+    "/Users/joaolopes/.nuget/packages/fsharp.core/8.0.100/fsharp.core.8.0.100.nupkg.sha512"
+  ],
+  "logs": []
+}
