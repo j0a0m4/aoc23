@@ -1,14 +1,13 @@
 namespace advent
 
 module Common = 
+    open System.IO
+    let input day = $"./Inputs/day%i{day}" |> File.ReadAllLines
+
     let answerMsg p result = 
         sprintf "Part %i - Your puzzle answer was: %i" p result
 
 module Day1 =
-    open System.IO
-
-    let input = "./Inputs/day1" |> File.ReadAllLines
-
     let numbers =
         [
             "zero", "0"
@@ -82,6 +81,8 @@ module Day1 =
     
     let invoke =
         printfn "Day 1"
+        
+        let input = Common.input 1
 
         input
         |> partOne
